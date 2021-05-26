@@ -8,16 +8,16 @@
 // ==/UserScript==
 
 function addOriginToTitle() {
-	"use strict";
-	let tag = "[ " + location.origin + " ]";
-	if (document.title.includes(tag)) {
-		// pass
-	} else {
-		document.title = document.title + " " + tag;
-	}
+    "use strict";
+    let tag = "[ " + location.origin + " ]";
+    if (document.title.includes(tag)) {
+        // pass
+    } else {
+        document.title = document.title + " " + tag;
+    }
 }
 
 (function() {
-	addOriginToTitle();
-	setInterval(addOriginToTitle, 10000);
+    addOriginToTitle();
+    setInterval(addOriginToTitle, 10000);
 })();
