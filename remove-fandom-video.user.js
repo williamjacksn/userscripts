@@ -2,7 +2,7 @@
 // @name        Remove Fandom video
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://*.fandom.com/*
-// @version     2021.1
+// @version     2022.1
 // @description Remove Fandom video
 // @run-at      document-idle
 // @grant       none
@@ -10,8 +10,11 @@
 // ==/UserScript==
 
 function removeFandomVideo() {
-    'user strict';
+    'use strict';
     document.querySelectorAll('div.featured-video__wrapper').forEach((el) => {
+        el.remove();
+    });
+    document.querySelectorAll('div.top-ads-container').forEach((el) => {
         el.remove();
     });
 }
