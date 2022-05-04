@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name        Remove Fandom video
+// @name        Adjustments for fandom.com
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://*.fandom.com/*
-// @version     2022.2
-// @description Remove Fandom video
+// @version     2022.1
+// @description Adjustments for fandom.com
 // @run-at      document-idle
 // @grant       none
 // @author      William Jackson
 // ==/UserScript==
 
-function removeFandomVideo() {
+function adjustPage() {
     'use strict';
     document.querySelectorAll('div.featured-video__wrapper').forEach((el) => {
         el.remove();
@@ -23,6 +23,6 @@ function removeFandomVideo() {
 }
 
 (function() {
-    removeFandomVideo();
-    setInterval(removeFandomVideo, 10000);
+    adjustPage();
+    setInterval(adjustPage, 10000);
 })();
