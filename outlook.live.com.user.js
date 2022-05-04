@@ -2,7 +2,7 @@
 // @name        Adjustments for outlook.live.com
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://outlook.live.com/*
-// @version     2022.2
+// @version     2022.3
 // @description Adjustments for outlook.live.com
 // @run-at      document-idle
 // @grant       none
@@ -21,5 +21,5 @@ function adjustPage() {
 
 (function() {
     adjustPage();
-    setInterval(adjustPAge, 10000);
+    setInterval(adjustPage, 10000);
 })();
