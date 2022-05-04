@@ -2,7 +2,7 @@
 // @name        Adjustments for fandom.com
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://*.fandom.com/*
-// @version     2022.1
+// @version     2022.2
 // @description Adjustments for fandom.com
 // @run-at      document-idle
 // @grant       none
@@ -11,14 +11,16 @@
 
 function adjustPage() {
     'use strict';
-    document.querySelectorAll('div.featured-video__wrapper').forEach((el) => {
-        el.remove();
-    });
-    document.querySelectorAll('div.top-ads-container').forEach((el) => {
-        el.remove();
-    });
-    document.querySelectorAll('div#WikiaBar').forEach((el) => {
-        el.remove();
+    const selectorsToRemove = [
+        'div.featured-video__wrapper',
+        'div.top-ads-container',
+        'div#WikiaBar',
+        'div#rail-boxad-wrapper'
+    ]
+    selectorsToRemove.map(s => {
+        document.querySelectorAll(s).forEach((el) => {
+            el.remove();
+        });
     });
 }
 
