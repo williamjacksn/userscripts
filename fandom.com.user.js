@@ -2,7 +2,7 @@
 // @name        Adjustments for fandom.com
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://*.fandom.com/*
-// @version     2022.3
+// @version     2022.4
 // @description Adjustments for fandom.com
 // @run-at      document-idle
 // @grant       none
@@ -13,9 +13,11 @@ function adjustPage() {
     'use strict';
     const selectorsToRemove = [
         'div.ad-slot',
+        'div.bottom-ads-container',
         'div.featured-video__wrapper',
         'div.top-ads-container',
         'div#WikiaBar',
+        'div#mixed-content-footer',
         'div#rail-boxad-wrapper'
     ]
     selectorsToRemove.map(s => {
