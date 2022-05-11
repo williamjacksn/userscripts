@@ -2,7 +2,7 @@
 // @name        Adjustments for outlook.live.com
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://outlook.live.com/*
-// @version     2022.3
+// @version     2022.4
 // @description Adjustments for outlook.live.com
 // @run-at      document-idle
 // @grant       none
@@ -13,6 +13,9 @@ function adjustPage() {
     'use strict';
     document.querySelectorAll('div#owaadbar0').forEach((el) => {
         el.parentNode.parentNode.parentNode.remove();
+    });
+    document.querySelectorAll('div.VPtFl').forEach((el) => {
+        el.remove();
     });
     document.querySelectorAll('div.VPtFloqixpkkqJNcOv2T').forEach((el) => {
         el.remove();
