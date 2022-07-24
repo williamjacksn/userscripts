@@ -3,7 +3,7 @@
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://lcr.churchofjesuschrist.org/records/member-list
 // @grant       none
-// @version     2022.5
+// @version     2022.6
 // @author      William Jackson
 // @description Adjustments for lcr.churchofjesuschrist.org
 // ==/UserScript==
