@@ -3,16 +3,24 @@
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://lcr.churchofjesuschrist.org/records/member-list
 // @grant       none
-// @version     2022.1
+// @version     2022.2
 // @author      William Jackson
 // @description Adjustments for lcr.churchofjesuschrist.org
 // ==/UserScript==
 
+const buttonId = 'williamjacksn-userscript-button'
 
 function adjustPage() {
     const t = document.querySelector('table.member-list');
     if (t) {
-        console.log(`I found the table! It has ${t.rows.length} rows.`);
+        let b = document.getElementById(buttonId);
+        if (b === null) {
+            b = document.createElement('button');
+            b.id = buttonId;
+            b.classList.add('btn');
+            b.innerText = 'Do a thing';
+            t.after(b);
+        }
     }
 }
 
