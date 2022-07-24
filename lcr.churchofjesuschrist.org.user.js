@@ -3,7 +3,7 @@
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://lcr.churchofjesuschrist.org/records/member-list
 // @grant       none
-// @version     2022.1
+// @version     2022.2
 // @author      William Jackson
 // @description Adjustments for lcr.churchofjesuschrist.org
 // ==/UserScript==
@@ -18,7 +18,7 @@ function adjustPage() {
             b = document.createElement('button');
             b.id = buttonId;
             b.classList.add('btn');
-            b.innerText = 'Do a thing';
+            b.innerText = 'Download CSV';
             b.addEventListener('click', logMembers);
             t.after(b);
         }
