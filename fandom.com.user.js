@@ -2,7 +2,7 @@
 // @name        Adjustments for fandom.com
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://*.fandom.com/*
-// @version     2022.4
+// @version     2022.5
 // @description Adjustments for fandom.com
 // @run-at      document-idle
 // @grant       none
@@ -15,6 +15,7 @@ function adjustPage() {
         'div.ad-slot',
         'div.bottom-ads-container',
         'div.featured-video__wrapper',
+        'div.global-navigation__top',
         'div.top-ads-container',
         'div#WikiaBar',
         'div#mixed-content-footer',
