@@ -2,21 +2,27 @@
 // @name        Adjustments for imgur.com
 // @namespace   https://github.com/williamjacksn/userscripts
 // @match       https://imgur.com/*
-// @version     2022.1
+// @version     2022.2
 // @description Adjustments for imgur.com
 // @run-at      document-idle
 // @grant       none
 // @author      William Jackson
 // ==/UserScript==
 
-function adjustImgurCom() {
+function adjustPage() {
     'use strict';
-    document.querySelectorAll('div#primisPlayerContainerDiv').forEach((el) => {
-        el.remove();
+    const selectorsToRemove = [
+        'div.ad-slot',
+        'div#primisPlayerContainerDiv'
+    ]
+    selectorsToRemove.map(s => {
+        document.querySelectorAll(s).forEach((el) => {
+            el.remove();
+        });
     });
 }
 
-(function() {
-    adjustImgurCom();
-    setInterval(adjustImgurCom, 10000);
+(function () {
+    adjustPage();
+    setInterval(adjustPage, 10000);
 })();
